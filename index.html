@@ -206,9 +206,10 @@
             width: 60px;
             height: 60px;
             border-radius: 16px;
-            object-fit: cover;
+            object-fit: contain;
             margin-right: 1.2rem;
             box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.5); /* Added slight background so gold pops */
         }
         
         .app-header h4 {
@@ -405,7 +406,7 @@
                 <!-- Link Hub App Mockup -->
                 <div class="app-mockup">
                     <div class="app-header">
-                        <img src="profile.jpg" alt="Profile" class="app-profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Spoon&background=e2e8f0&color=0a2e26&size=200'">
+                        <img src="logo.png" alt="Ali Spoon Logo" class="app-profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Spoon&background=e2e8f0&color=0a2e26&size=200'">
                         <div>
                             <h4>Ali Spoon Gallery</h4>
                             <p>Biz bilan bog'laning!</p>
