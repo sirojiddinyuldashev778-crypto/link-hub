@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Spoon Gallery | Pro Version</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --dark-green: #0a2e26;
+            --accent: #14b8a6;
+            --glass-bg: rgba(255, 255, 255, 0.45);
+            --glass-border: rgba(255, 255, 255, 0.7);
+            --text-dark: #1e293b;
+            --text-light: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            
+            /* Premium Mesh Gradient Background */
+            background-color: #fdfdfd;
+            background-image: 
+                radial-gradient(80% 80% at 0% 0%, rgba(255, 177, 193, 0.8), transparent 100%),
+                radial-gradient(80% 80% at 100% 0%, rgba(255, 223, 186, 0.8), transparent 100%),
+                radial-gradient(80% 80% at 0% 100%, rgba(186, 225, 255, 0.8), transparent 100%),
+                radial-gradient(80% 80% at 100% 100%, rgba(186, 255, 201, 0.8), transparent 100%);
+            background-attachment: fixed;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Subtle background utensils */
+        .bg-utensil {
+            position: absolute;
+            color: #ffffff;
+            opacity: 0.4;
+            z-index: -1;
+            font-size: 150px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+        }
+        .bu-1 { top: 10%; left: 5%; animation: float 20s infinite ease-in-out alternate; }
+        .bu-2 { bottom: 10%; right: 5%; font-size: 200px; animation: float 25s infinite ease-in-out alternate-reverse; }
+
+        /* Main Glass Card */
+        .glass-container {
+            width: 100%;
+            max-width: 1200px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid var(--glass-border);
+            border-radius: 2.5rem;
+            padding: 3.5rem 4rem;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255,255,255,0.5);
+            display: flex;
+            flex-direction: column;
+            min-height: 80vh;
+            animation: fadeUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        
+        .nav-brand {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Hero Layout */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            flex: 1;
+        }
+
+        /* Left Side: Text and CTA */
+        .hero-left h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            letter-spacing: -1.5px;
+        }
+        
+        .hero-left p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 90%;
+            line-height: 1.6;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            background: var(--dark-green);
+            color: #fff;
+            padding: 1.2rem 2.5rem;
+            border-radius: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(10, 46, 38, 0.15);
+        }
+        
+        .btn-primary i {
+            margin-left: 12px;
+            font-size: 0.9em;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(10, 46, 38, 0.25);
+        }
+        .btn-primary:hover i {
+            transform: translateX(5px);
+        }
+
+        .btn-secondary {
+            color: var(--text-dark);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary i { margin-left: 8px; font-size: 0.8em; }
+        .btn-secondary:hover { color: var(--dark-green); }
+
+        /* Right Side: App Mockup (Links Hub) */
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .app-mockup {
+            width: 360px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            border-radius: 2.5rem;
+            padding: 2rem;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
+            border: 1px solid #fff;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+        
+        .app-profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            object-fit: cover;
+            margin-right: 1.2rem;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .app-header h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        .app-header p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .widget-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background: #f8fafc;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid transparent;
+        }
+        
+        .widget-link:hover {
+            background: #ffffff;
+            border-color: #e2e8f0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transform: translateY(-3px) scale(1.02);
+        }
+        
+        .widget-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .widget-link:hover .widget-icon {
+            background: var(--dark-green);
+            color: #fff;
+        }
+
+        /* Floating Pro Widgets */
+        .floating-widget {
+            position: absolute;
+            background: var(--dark-green);
+            color: #fff;
+            padding: 1.2rem 1.5rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 20px 40px rgba(10, 46, 38, 0.25);
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .fw-1 { top: 20px; right: -50px; }
+        .fw-2 { bottom: 50px; left: -60px; animation-delay: -3s; }
+
+        .fw-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+        
+        .fw-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .fw-text strong {
+            font-size: 1.4rem;
+            line-height: 1;
+            margin-bottom: 2px;
+        }
+        
+        .fw-text span {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-left h1 { font-size: 3rem; }
+            .glass-container { padding: 3rem 2rem; }
+            .nav-links { display: none; }
+        }
+
+        @media (max-width: 800px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 5rem;
+                text-align: center;
+            }
+            .hero-left p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .floating-widget {
+                transform: scale(0.8);
+            }
+            .fw-1 { top: -30px; right: 0px; }
+            .fw-2 { bottom: -30px; left: 0px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Kitchenware Elements -->
+    <i class="fas fa-utensils bg-utensil bu-1"></i>
+    <i class="fas fa-spoon bg-utensil bu-2"></i>
+
+    <!-- Main Glass Container -->
+    <div class="glass-container">
+        
+        <!-- Top Navbar -->
+        <nav class="navbar">
+            <div class="nav-brand">Ali Spoon</div>
+            <div class="nav-links">
+                <span>Features</span>
+                <span>Products</span>
+                <span>Wholesale</span>
+                <span>Contact</span>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            
+            <!-- Left Content -->
+            <div class="hero-left">
+                <h1>Premium Cutlery & Kitchenware in your hands.</h1>
+                <p>Abu Saxiy Chinni bozoridagi eng yirik B2B hamkor. Barcha turdagi yuqori sifatli oshxona anjomlari, qoshiq va vilkalar to'plamlarini bizdan toping.</p>
+                
+                <div class="hero-actions">
+                    <a href="#" class="btn-primary">
+                        Get Started <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        Raqamli Katalog <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right App / Link Hub -->
+            <div class="hero-right">
+                
+                <!-- Floating Pro Widget 1 -->
+                <div class="floating-widget fw-1">
+                    <div class="fw-text">
+                        <strong>1.5K+</strong>
+                        <span>Mijozlar</span>
+                    </div>
+                    <div class="fw-icon"><i class="fas fa-users"></i></div>
+                </div>
+
+                <!-- Floating Pro Widget 2 -->
+                <div class="floating-widget fw-2">
+                    <div class="fw-text">
+                        <strong>100%</strong>
+                        <span>Kafolat</span>
+                    </div>
+                    <div class="fw-icon"><i class="fas fa-shield-alt"></i></div>
+                </div>
+
+                <!-- Link Hub App Mockup -->
+                <div class="app-mockup">
+                    <div class="app-header">
+                        <img src="profile.jpg" alt="Profile" class="app-profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Spoon&background=e2e8f0&color=0a2e26&size=200'">
+                        <div>
+                            <h4>Ali Spoon Gallery</h4>
+                            <p>Biz bilan bog'laning!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="app-links">
+                        <a href="https://t.me/" target="_blank" class="widget-link">
+                            <div class="widget-icon"><i class="fab fa-telegram-plane"></i></div>
+                            <div class="widget-text">Telegram orqali buyurtma</div>
+                        </a>
+                        
+                        <a href="https://instagram.com/" target="_blank" class="widget-link">
+                            <div class="widget-icon"><i class="fab fa-instagram"></i></div>
+                            <div class="widget-text">Instagram galereyasi</div>
+                        </a>
+                        
+                        <a href="https://maps.google.com/" target="_blank" class="widget-link">
+                            <div class="widget-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="widget-text">Do'kon manzili</div>
+                        </a>
+                        
+                        <a href="tel:+998901234567" class="widget-link">
+                            <div class="widget-icon"><i class="fas fa-headset"></i></div>
+                            <div class="widget-text">Menejer bilan bog'lanish</div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
