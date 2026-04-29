@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aliqoshiq.uz"
+        }
+      ],
+      "destination": "https://aliqoshiq.uz/$1",
+      "permanent": true
+    }
+  ]
+}
