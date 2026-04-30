@@ -290,8 +290,28 @@
     <script>
     // Navbar scroll effect
     const nav = document.getElementById('navbar');
+    const langSwitch = document.querySelector('.lang-switch');
+    const langCurrent = document.querySelector('.lang-current');
+
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 50);
+        // Close lang dropdown on scroll
+        if (langSwitch) langSwitch.classList.remove('open');
+    });
+
+    // Toggle lang dropdown on click/tap
+    if (langCurrent) {
+        langCurrent.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langSwitch.classList.toggle('open');
+        });
+    }
+
+    // Close lang dropdown when clicking anywhere outside
+    document.addEventListener('click', (e) => {
+        if (langSwitch && !langSwitch.contains(e.target)) {
+            langSwitch.classList.remove('open');
+        }
     });
 
     // Hamburger menu

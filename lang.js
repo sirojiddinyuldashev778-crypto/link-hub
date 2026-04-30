@@ -200,6 +200,10 @@ window.changeLang = function(lang) {
       if(lang === "en") { currentLangText.textContent = "EN"; currentLangImg.src = "https://flagcdn.com/w40/us.png"; }
   }
   localStorage.setItem("lang", lang);
+
+  // Close lang dropdown after selection
+  const langSwitchEl = document.querySelector('.lang-switch');
+  if(langSwitchEl) langSwitchEl.classList.remove('open');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
