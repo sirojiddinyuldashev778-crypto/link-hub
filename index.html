@@ -6,8 +6,8 @@
     <title>Ali Spoon Gallery | Oshxona anjomlari va qoshiqlar to'plami</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Ali Spoon Gallery - Abu Saxiy Chinni bozoridagi eng yirik B2B hamkor. Yuqori sifatli qoshiq, vilka va oshxona anjomlari to'plamlarini xarid qiling.">
-    <meta name="keywords" content="qoshiq, vilka, oshxona anjomlari, chinni bozori, abu saxiy, ali spoon gallery, pichoq, qoshiqlar to'plami, ulgurji savdo, B2B, O'zbekiston, Toshkent">
+    <meta name="description" content="Ali Spoon Gallery - Abu Saxiy Chinni bozoridagi eng yirik qoshiq va oshxona anjomlari importyori. Ulgurji savdo, restoranlar uchun premium sifatdagi to'plamlar.">
+    <meta name="keywords" content="qoshiqlar to'plami, vilka, oshxona anjomlari, chinni bozori, abu saxiy, ali spoon gallery, qoshiqlar ulgurji, pichoq, to'yxona uchun sarpo, ложки вилки оптом, посуда ташкент, абу сахий посуда, кухонные принадлежности, B2B O'zbekiston, restoran jihozlari">
     <meta name="author" content="Ali Spoon Gallery">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://aliqoshiq.uz/" />
@@ -28,440 +28,337 @@
     <meta property="twitter:title" content="Ali Spoon Gallery | Premium Cutlery &amp; Kitchenware">
     <meta property="twitter:description" content="Abu Saxiy Chinni bozoridagi eng yirik B2B hamkor. Barcha turdagi yuqori sifatli oshxona anjomlari, qoshiq va vilkalar to'plamlarini bizdan toping.">
     <meta property="twitter:image" content="https://aliqoshiq.uz/logo.png">
-    
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Ali Spoon Gallery",
+      "description": "Abu Saxiy Chinni bozoridagi eng yirik B2B hamkor — yuqori sifatli oshxona anjomlari",
+      "url": "https://aliqoshiq.uz",
+      "image": "https://aliqoshiq.uz/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Toshkent",
+        "addressCountry": "UZ"
+      }
+    }
+    </script>
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --dark-green: #0a2e26;
-            --accent: #14b8a6;
-            --glass-bg: rgba(255, 255, 255, 0.45);
-            --glass-border: rgba(255, 255, 255, 0.7);
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            
-            /* Premium Mesh Gradient Background */
-            background-color: #fdfdfd;
-            background-image: 
-                radial-gradient(80% 80% at 0% 0%, rgba(255, 177, 193, 0.8), transparent 100%),
-                radial-gradient(80% 80% at 100% 0%, rgba(255, 223, 186, 0.8), transparent 100%),
-                radial-gradient(80% 80% at 0% 100%, rgba(186, 225, 255, 0.8), transparent 100%),
-                radial-gradient(80% 80% at 100% 100%, rgba(186, 255, 201, 0.8), transparent 100%);
-            background-attachment: fixed;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Subtle background utensils */
-        .bg-utensil {
-            position: absolute;
-            color: #ffffff;
-            opacity: 0.4;
-            z-index: -1;
-            font-size: 150px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
-        }
-        .bu-1 { top: 10%; left: 5%; animation: float 20s infinite ease-in-out alternate; }
-        .bu-2 { bottom: 10%; right: 5%; font-size: 200px; animation: float 25s infinite ease-in-out alternate-reverse; }
-
-        /* Main Glass Card */
-        .glass-container {
-            width: 100%;
-            max-width: 1200px;
-            background: var(--glass-bg);
-            backdrop-filter: blur(40px);
-            -webkit-backdrop-filter: blur(40px);
-            border: 1px solid var(--glass-border);
-            border-radius: 2.5rem;
-            padding: 3.5rem 4rem;
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255,255,255,0.5);
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            animation: fadeUp 1s ease-out forwards;
-        }
-
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 5rem;
-        }
-        
-        .nav-brand {
-            font-size: 1.4rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            color: var(--text-dark);
-            text-transform: uppercase;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-dark);
-        }
-
-        /* Hero Layout */
-        .hero-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            flex: 1;
-        }
-
-        /* Left Side: Text and CTA */
-        .hero-left h1 {
-            font-size: 4rem;
-            font-weight: 600;
-            line-height: 1.1;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            letter-spacing: -1.5px;
-        }
-        
-        .hero-left p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 3rem;
-            max-width: 90%;
-            line-height: 1.6;
-        }
-
-        .hero-actions {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            background: var(--dark-green);
-            color: #fff;
-            padding: 1.2rem 2.5rem;
-            border-radius: 14px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(10, 46, 38, 0.15);
-        }
-        
-        .btn-primary i {
-            margin-left: 12px;
-            font-size: 0.9em;
-            transition: transform 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(10, 46, 38, 0.25);
-        }
-        .btn-primary:hover i {
-            transform: translateX(5px);
-        }
-
-        .btn-secondary {
-            color: var(--text-dark);
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-secondary i { margin-left: 8px; font-size: 0.8em; }
-        .btn-secondary:hover { color: var(--dark-green); }
-
-        /* Right Side: App Mockup (Links Hub) */
-        .hero-right {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .app-mockup {
-            width: 360px;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 2.5rem;
-            padding: 2rem;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.08);
-            position: relative;
-            z-index: 2;
-            border: 1px solid #fff;
-        }
-
-        .app-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 2.5rem;
-        }
-        
-        .app-profile-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
-            object-fit: cover;
-            margin-right: 1.2rem;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        }
-        
-        .app-header h4 {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-        
-        .app-header p {
-            margin: 0;
-            font-size: 0.85rem;
-            color: var(--text-light);
-        }
-
-        .widget-link {
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-            background: #f8fafc;
-            border-radius: 16px;
-            margin-bottom: 1rem;
-            text-decoration: none;
-            color: var(--text-dark);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            border: 1px solid transparent;
-        }
-        
-        .widget-link:hover {
-            background: #ffffff;
-            border-color: #e2e8f0;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            transform: translateY(-3px) scale(1.02);
-        }
-        
-        .widget-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 12px;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-            color: var(--text-dark);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .widget-link:hover .widget-icon {
-            background: var(--dark-green);
-            color: #fff;
-        }
-
-        /* Floating Pro Widgets */
-        .floating-widget {
-            position: absolute;
-            background: var(--dark-green);
-            color: #fff;
-            padding: 1.2rem 1.5rem;
-            border-radius: 1.2rem;
-            box-shadow: 0 20px 40px rgba(10, 46, 38, 0.25);
-            z-index: 3;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .fw-1 { top: 20px; right: -50px; }
-        .fw-2 { bottom: 50px; left: -60px; animation-delay: -3s; }
-
-        .fw-icon {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--accent);
-        }
-        
-        .fw-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .fw-text strong {
-            font-size: 1.4rem;
-            line-height: 1;
-            margin-bottom: 2px;
-        }
-        
-        .fw-text span {
-            font-size: 0.75rem;
-            opacity: 0.8;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-left h1 { font-size: 3rem; }
-            .glass-container { padding: 3rem 2rem; }
-            .nav-links { display: none; }
-        }
-
-        @media (max-width: 800px) {
-            .hero-section {
-                grid-template-columns: 1fr;
-                gap: 5rem;
-                text-align: center;
-            }
-            .hero-left p {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-actions {
-                justify-content: center;
-            }
-            .floating-widget {
-                transform: scale(0.8);
-            }
-            .fw-1 { top: -30px; right: 0px; }
-            .fw-2 { bottom: -30px; left: 0px; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Background Kitchenware Elements -->
-    <i class="fas fa-utensils bg-utensil bu-1"></i>
-    <i class="fas fa-spoon bg-utensil bu-2"></i>
-
-    <!-- Main Glass Container -->
-    <main class="glass-container">
-        
-        <!-- Top Navbar -->
-        <nav class="navbar">
-            <div class="nav-brand">Ali Spoon</div>
-            <div class="nav-links">
-                <span>Features</span>
-                <span>Products</span>
-                <span>Wholesale</span>
-                <span>Contact</span>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <div class="hero-section">
-            
-            <!-- Left Content -->
-            <div class="hero-left">
-                <h1>Premium Cutlery & Kitchenware in your hands.</h1>
-                <p>Abu Saxiy Chinni bozoridagi eng yirik B2B hamkor. Barcha turdagi yuqori sifatli oshxona anjomlari, qoshiq va vilkalar to'plamlarini bizdan toping.</p>
-                
-                <div class="hero-actions">
-                    <a href="#" class="btn-primary">
-                        Get Started <i class="fas fa-chevron-right"></i>
-                    </a>
-                    <a href="#" class="btn-secondary">
-                        Raqamli Katalog <i class="fas fa-arrow-right"></i>
-                    </a>
+    <!-- NAVIGATION -->
+    <nav class="nav" id="navbar">
+        <div class="nav-logo">
+            <img src="logo.png" alt="Ali Spoon Gallery" onerror="this.src='https://ui-avatars.com/api/?name=AS&background=2C5F4B&color=fff&size=80&rounded=true'">
+            <span>Ali Spoon Gallery</span>
+        </div>
+        <div class="nav-links">
+            <a href="#categories" data-i18n="n-prod">Mahsulotlar</a>
+            <a href="#about" data-i18n="n-about">Biz haqimizda</a>
+            <a href="#contact" data-i18n="n-cont">Aloqa</a>
+        </div>
+        <div class="nav-actions">
+            <div class="lang-switch">
+                <div class="lang-current">
+                    <img id="current-lang-img" src="https://flagcdn.com/w40/uz.png" alt="Lang">
+                    <span id="current-lang-text">UZ</span>
+                </div>
+                <div class="lang-dropdown">
+                    <div class="lang-option" onclick="changeLang('uz')"><img src="https://flagcdn.com/w40/uz.png" alt="UZ"> O'zbekcha</div>
+                    <div class="lang-option" onclick="changeLang('ru')"><img src="https://flagcdn.com/w40/ru.png" alt="RU"> Русский</div>
+                    <div class="lang-option" onclick="changeLang('en')"><img src="https://flagcdn.com/w40/us.png" alt="EN"> English</div>
                 </div>
             </div>
+            <a href="#contact" class="nav-cta" data-i18n="n-btn">Bog'lanish</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menyu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
 
-            <!-- Right App / Link Hub -->
-            <div class="hero-right">
-                
-                <!-- Floating Pro Widget 1 -->
-                <div class="floating-widget fw-1">
-                    <div class="fw-text">
-                        <strong>1.5K+</strong>
-                        <span>Mijozlar</span>
-                    </div>
-                    <div class="fw-icon"><i class="fas fa-users"></i></div>
-                </div>
+    <!-- MOBILE MENU -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#categories" class="mobile-link" data-i18n="n-prod">Mahsulotlar</a>
+        <a href="#about" class="mobile-link" data-i18n="n-about">Biz haqimizda</a>
+        <a href="#contact" class="mobile-link" data-i18n="n-cont">Aloqa</a>
+        <a href="https://t.me/aliqoshiq_uz" target="_blank" class="mobile-link"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://www.instagram.com/aliqoshiq.uz/" target="_blank" class="mobile-link"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
 
-                <!-- Floating Pro Widget 2 -->
-                <div class="floating-widget fw-2">
-                    <div class="fw-text">
-                        <strong>100%</strong>
-                        <span>Kafolat</span>
-                    </div>
-                    <div class="fw-icon"><i class="fas fa-shield-alt"></i></div>
-                </div>
-
-                <!-- Link Hub App Mockup -->
-                <div class="app-mockup">
-                    <div class="app-header">
-                        <img src="logo.png" alt="Ali Logo" class="app-profile-img" onerror="this.src='https://ui-avatars.com/api/?name=Ali+Spoon&background=e2e8f0&color=0a2e26&size=200'">
-                        <div>
-                            <h4>Ali Spoon Gallery</h4>
-                            <p>Biz bilan bog'laning!</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-links">
-                        <a href="https://t.me/aliqoshiq_uz" target="_blank" class="widget-link">
-                            <div class="widget-icon"><i class="fab fa-telegram"></i></div>
-                            <div class="widget-text">Telegram Katalog</div>
-                        </a>
-
-                        <a href="https://t.me/iamyuldashevs" target="_blank" class="widget-link">
-                            <div class="widget-icon"><i class="fab fa-telegram-plane"></i></div>
-                            <div class="widget-text">Telegram orqali bog'lanish</div>
-                        </a>
-                        
-                        <a href="https://www.instagram.com/aliqoshiq.uz/" target="_blank" class="widget-link">
-                            <div class="widget-icon"><i class="fab fa-instagram"></i></div>
-                            <div class="widget-text">Instagram Katalog</div>
-                        </a>
-                        
-                        <a href="https://maps.app.goo.gl/vWnUDD2Dq4bTSYcL9" target="_blank" class="widget-link">
-                            <div class="widget-icon"><i class="fas fa-location-dot"></i></div>
-                            <div class="widget-text">Do'kon manzili</div>
-                        </a>
-                    </div>
-                </div>
-
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 data-i18n="h-title">Premium darajadagi Qoshiq, vilka va Oshxona anjomlari</h1>
+            <p data-i18n="h-desc">Restoran va do'kon egalari uchun qoshiq-vilka to'plamlarining yirik distribyutori. MDH miqyosida ulgurji xarid qiling va biznesingizni premium sifat bilan ta'minlang.</p>
+            <div class="hero-btns">
+                <a href="https://t.me/aliqoshiq_uz" target="_blank" class="btn-fill">
+                    <i class="fab fa-telegram"></i> <span data-i18n="h-btn1">Katalogni Ko'rish</span>
+                </a>
+                <a href="#contact" class="btn-outline" data-i18n="h-btn2">Bog'lanish</a>
             </div>
         </div>
-    </main>
+        <div class="scroll-hint">
+            <i class="fas fa-chevron-down"></i>
+            <span data-i18n="h-scroll">Pastga suring</span>
+        </div>
+    </section>
 
+    <!-- FEATURES -->
+    <section class="features">
+        <div class="feat">
+            <i class="fas fa-handshake"></i>
+            <h4 data-i18n="f1-t">B2B Hamkor</h4>
+            <p data-i18n="f1-d">Ishonchli ulgurji hamkorlik</p>
+        </div>
+        <div class="feat">
+            <i class="fas fa-users"></i>
+            <h4 data-i18n="f2-t">100.000+ Mijoz</h4>
+            <p data-i18n="f2-d">Butun O'zbekiston bo'ylab</p>
+        </div>
+        <div class="feat">
+            <i class="fas fa-shield-alt"></i>
+            <h4 data-i18n="f3-t">100% Kafolat</h4>
+            <p data-i18n="f3-d">Sifat kafolati</p>
+        </div>
+        <div class="feat">
+            <i class="fas fa-map-marker-alt"></i>
+            <h4 data-i18n="f4-t">Abu Saxiy</h4>
+            <p data-i18n="f4-d">Chinni bozori, Toshkent</p>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section cats" id="categories">
+        <div class="section-head reveal">
+            <h2 data-i18n="c-title">Mahsulot Kategoriyalari</h2>
+            <p data-i18n="c-desc">Eng yuqori sifatli oshxona anjomlarini sizga taqdim etamiz</p>
+            <div class="line"></div>
+        </div>
+        <div class="cat-grid">
+            <a href="https://t.me/aliqoshiq_uz" target="_blank" class="cat-card reveal">
+                <img src="media__1777544697544.jpg" alt="Qoshiq va Vilkalar" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 data-i18n="c1-t">Qoshiq va Vilkalar</h3>
+                    <p data-i18n="c1-d">Premium to'plamlar</p>
+                </div>
+            </a>
+            <a href="https://t.me/aliqoshiq_uz" target="_blank" class="cat-card reveal">
+                <img src="media__1777544697591.jpg" alt="Oshxona Anjomlari" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 data-i18n="c2-t">Oshxona Anjomlari</h3>
+                    <p data-i18n="c2-d">Professional jihozlar</p>
+                </div>
+            </a>
+            <a href="https://t.me/aliqoshiq_uz" target="_blank" class="cat-card reveal">
+                <img src="media__1777545340328.jpg" alt="Maxsus To'plamlar" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 data-i18n="c3-t">Maxsus To'plamlar</h3>
+                    <p data-i18n="c3-d">Sovg'a to'plamlari</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+        <div class="about-grid">
+            <div class="about-img reveal">
+                <div class="about-images">
+                    <img src="why 1.png" alt="Ali Spoon Gallery 1" class="about-img-1" loading="lazy" onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+                    <img src="why 2.png" alt="Ali Spoon Gallery 2" class="about-img-2" loading="lazy" onclick="openLightbox(this.src)" style="cursor:zoom-in;">
+                </div>
+            </div>
+            <div class="about-text reveal">
+                <h2 data-i18n="a-title">Nima uchun Ali?</h2>
+                <p data-i18n="a-p1">Ali — O'zbekiston va MDH bozorida qoshiq-vilka to'plamlari bo'yicha o'z brendiga ega bo'lgan yirik importyor va asosiy yetkazib beruvchidir. Abu Saxiy majmuasidagi ko'p yillik faoliyatimiz va bevosita Xitoydan import imkoniyatlarimiz orqali eng yuqori sifatli mahsulotlarni birinchi qo'l narxlarda taqdim etamiz.</p>
+                <p data-i18n="a-p2">Bizning asosiy maqsadimiz — restoran majmualari, yirik do'konlar va ulgurji savdo subyektlarini nafis dizayn hamda premium sifat bilan ta'minlashdir. Har bir mahsulot Ali brendi kafolati ostida sinchiklab tanlangan bo'lib, biznesingiz nufuzini yangi bosqichga olib chiqadi.</p>
+                <div class="stats">
+                    <div class="stat">
+                        <strong>100.000+</strong>
+                        <span data-i18n="a-s1">Mijozlar</span>
+                    </div>
+                    <div class="stat">
+                        <strong>10+</strong>
+                        <span data-i18n="a-s2">Yillik tajriba</span>
+                    </div>
+                    <div class="stat">
+                        <strong><i class="fas fa-certificate"></i></strong>
+                        <span data-i18n="a-s3">Sifat kafolati</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+        <div class="section-head reveal">
+            <h2 data-i18n="co-title">Biz Bilan Bog'laning</h2>
+            <p data-i18n="co-desc">Buyurtma berish yoki savol yo'llash uchun qulay usulni tanlang</p>
+            <div class="line"></div>
+        </div>
+        <div class="contact-grid">
+            <a href="tel:+998939277778" class="c-card reveal" id="link-phone">
+                <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+                <h4 data-i18n="co2-t">Telefon</h4>
+                <p data-i18n="co2-d">To'g'ridan-to'g'ri bog'lanish</p>
+                <span class="c-link"><span data-i18n="co2-b">Qo'ng'iroq</span> <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://t.me/iamyuldashevs" target="_blank" class="c-card reveal" id="link-telegram-contact">
+                <div class="c-icon"><i class="far fa-comment-dots"></i></div>
+                <h4 data-i18n="co3-t">Telegram Aloqa</h4>
+                <p data-i18n="co3-d">To'g'ridan-to'g'ri yozing</p>
+                <span class="c-link"><span data-i18n="co3-b">Yozish</span> <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://www.instagram.com/aliqoshiq.uz/" target="_blank" class="c-card reveal" id="link-instagram">
+                <div class="c-icon"><i class="fab fa-instagram"></i></div>
+                <h4 data-i18n="co4-t">Instagram</h4>
+                <p data-i18n="co4-d">Yangi mahsulotlar va aksiyalar</p>
+                <span class="c-link"><span data-i18n="co4-b">Ko'rish</span> <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://wa.me/998939277778" target="_blank" class="c-card reveal" id="link-whatsapp">
+                <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+                <h4 data-i18n="co6-t">WhatsApp</h4>
+                <p data-i18n="co6-d">Tezkor javoblar</p>
+                <span class="c-link"><span data-i18n="co6-b">Yozish</span> <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="javascript:void(0)" onclick="openMapModal()" class="c-card reveal" id="link-location">
+                <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <h4 data-i18n="co5-t">Do'kon Manzili</h4>
+                <p data-i18n="co5-d">Abu Saxiy Chinni bozori</p>
+                <span class="c-link"><span data-i18n="co5-b">Xaritada</span> <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h3>Ali Spoon Gallery</h3>
+                <p data-i18n="ft-desc">Premium sifatdagi oshxona anjomlari va qoshiq-vilka to'plamlari bilan biznesingizni bezating.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://t.me/aliqoshiq_uz" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://www.instagram.com/aliqoshiq.uz/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ali Spoon Gallery. <span data-i18n="ft-bot">Barcha huquqlar himoyalangan.</span></p>
+            <p style="margin-top: 8px;"><a href="mailto:ali.spoon@mail.ru" style="color: var(--gold); font-weight: 500; transition: color 0.3s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--gold)'"><i class="fas fa-envelope"></i> ali.spoon@mail.ru</a></p>
+        </div>
+    </footer>
+
+    <!-- MAP MODAL -->
+    <div class="map-modal" id="mapModal">
+        <div class="map-modal-content">
+            <button class="close-modal" onclick="closeMapModal()"><i class="fas fa-times"></i></button>
+            <h3 data-i18n="m-title">Ilovani tanlang</h3>
+            <p data-i18n="m-desc">Manzilni ochish uchun qulay xarita ilovasini tanlang:</p>
+            <div class="map-apps">
+                <a href="https://maps.app.goo.gl/vWnUDD2Dq4bTSYcL9" target="_blank" class="map-app-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2991/2991231.png" alt="Google Maps">
+                    <span>Google Maps</span>
+                </a>
+                <a href="https://yandex.uz/maps/-/CPSCYVyY" target="_blank" class="map-app-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/15466/15466030.png" alt="Yandex Maps">
+                    <span>Yandex Maps</span>
+                </a>
+                <a href="https://2gis.uz/tashkent/search/41.240943%2C69.164192" target="_blank" class="map-app-btn">
+                    <img src="https://apkpure.net/v2/img/2gis.png" alt="2GIS" onerror="this.src='https://cdn-icons-png.flaticon.com/512/854/854878.png'">
+                    <span>2GIS</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="close-lightbox" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+        <img id="lightbox-img" src="" alt="Zoomed Image">
+    </div>
+
+    <script src="lang.js"></script>
+    <script>
+    // Navbar scroll effect
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('open');
+        overlay.classList.toggle('show');
+        document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    overlay.addEventListener('click', toggleMenu);
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('open')) toggleMenu();
+        });
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), i * 100);
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Map Modal logic
+    const mapModal = document.getElementById('mapModal');
+    function openMapModal() {
+        mapModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMapModal() {
+        mapModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    // Close modal when clicking outside
+    mapModal.addEventListener('click', (e) => {
+        if(e.target === mapModal) closeMapModal();
+    });
+
+    // Lightbox logic
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        setTimeout(() => lightboxImg.src = '', 300);
+    }
+    lightbox.addEventListener('click', (e) => {
+        if(e.target === lightbox) closeLightbox();
+    });
+    </script>
 </body>
 </html>
