@@ -26,3 +26,5 @@ try {
 } finally {
     $listener.Stop()
 }
+"C:\Program Files\Git\cmd\git.exe" push -u origin main
+
